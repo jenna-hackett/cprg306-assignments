@@ -4,10 +4,10 @@ This repository will contain all of course CPRG306 assignments.
 
 ## Description
 
-This repository was created to host all of the assignments that will be created in the course, CPRG306 - Web Development 2.
+This repository was created to host all of the assignments that will be created in the course CPRG306 - Web Development 2.
 
 - Week 2 - Creating a Next.js app
-- Week 3
+- Week 3 -
 
 ## Installation Instructions
 
@@ -31,12 +31,12 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Usage
 
-[ ] How will this project be used? Include code examples or screenshots.
+- [ ] How will this project be used? Include code examples or screenshots.
 
 ## Contributing
 
-[ ] Explain how others can contribute
-[ ] Link to a CONTRIBUTING.md file if one exists.
+- [ ] Explain how others can contribute
+- [ ] Link to a CONTRIBUTING.md file if one exists.
 
 ## Credits
 
