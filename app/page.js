@@ -1,3 +1,8 @@
+/* 
+Author: Jenna Hackett
+Versions: Jan. 16, 2026
+ */
+
 import Link from "next/link";
 
 export default function Home() {
