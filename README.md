@@ -29,6 +29,8 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
 ## Usage
 
 - [ ] How will this project be used? Include code examples or screenshots.
@@ -45,8 +47,6 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Learn More
 
