@@ -6,8 +6,8 @@ This repository will contain all of course CPRG306 assignments.
 
 This repository was created to host all of the assignments I will be creating in my course, CPRG306 - Web Development 2.
 
--- **Week 2 - Creating a Next.js app**
--- **Week 3**
+- Week 2 - Creating a Next.js app
+- Week 3
 
 ## Installation Instructions
 
