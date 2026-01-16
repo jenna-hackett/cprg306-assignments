@@ -16,7 +16,7 @@ export default function StudentInfo() {
           Name: Jenna Hackett
         </p>
         <p className="pl-4">
-          GitHub:{" "}
+          GitHub:
           <Link className="underline" href="https://github.com/jenna-hackett/cprg306-assignments">
           cprg306-assignments
           </Link>
