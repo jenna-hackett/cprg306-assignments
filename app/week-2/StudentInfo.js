@@ -18,7 +18,7 @@ export default function StudentInfo() {
         <p className="pl-4">
           GitHub:
           <Link className="underline" href="https://github.com/jenna-hackett/cprg306-assignments">
-           cprg306-assignments
+          cprg306-assignments
           </Link>
         </p>
     </section>
