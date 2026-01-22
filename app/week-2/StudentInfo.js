@@ -10,14 +10,14 @@ export default function StudentInfo() {
     <section>
       {/* Student Info Component */}
       <header>
-        <h2 className="p-4 text-lg text-center font-bold">Student Information</h2>
+        <h1 className="p-4 text-2xl text-center font-bold text-pink-400">Student Information</h1>
       </header>
-        <p className="p-4">
+        <p className="pl-5 pb-3 text-lg">
           Name: Jenna Hackett
         </p>
-        <p className="pl-4">
+        <p className="pl-5 text-lg">
           GitHub:
-          <Link className="underline" href="https://github.com/jenna-hackett/cprg306-assignments">
+          <Link className="underline hover:text-pink-400" href="https://github.com/jenna-hackett/cprg306-assignments">
           cprg306-assignments
           </Link>
         </p>

@@ -88,7 +88,6 @@ const groceryItems = [
 
   return (
     <main>
-      <h1>Grocery List</h1>
       <ul>
         {groceryItems.map((item, index) => (
           <Item 
@@ -101,5 +100,4 @@ const groceryItems = [
       </ul>
     </main>
   );
-
 }
