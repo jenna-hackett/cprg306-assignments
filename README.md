@@ -6,8 +6,9 @@ This repository will contain all of course CPRG306 assignments.
 
 This repository was created to host all of the assignments that will be created in the course CPRG306 - Web Development 2.
 
-- Week 2 - Creating a Next.js app
-- Week 3 -
+- Week 2: Creating a Next.js app
+- Week 3: A tailwind CSS styled shopping list of grocery items.
+- Week 4: ...
 
 ## Installation Instructions
 
@@ -29,7 +30,7 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 ## Usage
 
-- [ ] How will this project be used? Include code examples or screenshots.
+This repository will be used for storing all CPRG306 assignments for instructor review.
 
 ## Contributing
 
