@@ -19,7 +19,7 @@ export default function GroceryItemList() {
   };
  
 const item3 = {
-  name: "Eggs, dozen 🥚",
+  name: "Eggs, Dozen 🥚", 
   quantity: 2,
   category: "Dairy",
   };
@@ -37,13 +37,13 @@ const item5 = {
   };
  
 const item6 = {
-  name: "Chicken breasts, 1 kg 🍗",
+  name: "Chicken Breasts, 1 kg 🍗",
   quantity: 1,
   category: "Meat",
   };
  
 const item7 = {
-  name: "Pasta sauce 🍝",
+  name: "Pasta Sauce 🍝",
   quantity: 3,
   category: "Canned Goods",
   };
