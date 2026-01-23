@@ -1,7 +1,7 @@
 /* 
 .\app\page.js
 Author: Jenna Hackett
-Versions: Jan. 16, 2026
+Versions: Jan. 23, 2026
  */
 
 import PageLinks from "./components/PageLinks";
@@ -16,10 +16,10 @@ export default function Home() {
           CPRG306: Web Development 2 - Assignments
         </h1>
         <ul>
-          <li className = "p-3 pb-2 mb-4 ml-4 mr-250 mt-7 text-xl">
+          <li className="pb-6">
             <PageLinks {...linkInfo[1]} /> 
           </li>
-          <li className = "p-3 pb-2 mb-4 ml-4 mr-250 text-xl">
+          <li className="pb-6">
               <PageLinks {...linkInfo[2]} />
           </li>
         </ul>
