@@ -1,6 +1,6 @@
 /* 
 Author: Jenna Hackett
-Versions: Jan. 22, 2026
+Version: Jan. 23, 2026
  */
 
 import Item from "./GroceryItem";
