@@ -7,78 +7,78 @@ import Item from "./GroceryItem";
 
 export default function GroceryItemList() {
   const item1 = {
-    name: "milk, 4 L 🥛",
+    name: "Milk, 4 L 🥛",
     quantity: 1,
-    category: "dairy",
+    category: "Dairy",
   };
 
   const item2 = {
-  name: "bread 🍞",
+  name: "Bread 🍞",
   quantity: 2,
-  category: "bakery",
+  category: "Bakery",
   };
  
 const item3 = {
-  name: "eggs, dozen 🥚",
+  name: "Eggs, dozen 🥚",
   quantity: 2,
-  category: "dairy",
+  category: "Dairy",
   };
  
 const item4 = {
-  name: "bananas 🍌",
+  name: "Bananas 🍌",
   quantity: 6,
-  category: "produce",
+  category: "Produce",
   };
  
 const item5 = {
-  name: "broccoli 🥦",
+  name: "Broccoli 🥦",
   quantity: 3,
-  category: "produce",
+  category: "Produce",
   };
  
 const item6 = {
-  name: "chicken breasts, 1 kg 🍗",
+  name: "Chicken breasts, 1 kg 🍗",
   quantity: 1,
-  category: "meat",
+  category: "Meat",
   };
  
 const item7 = {
-  name: "pasta sauce 🍝",
+  name: "Pasta sauce 🍝",
   quantity: 3,
-  category: "canned goods",
+  category: "Canned Goods",
   };
  
 const item8 = {
-  name: "spaghetti, 454 g 🍝",
+  name: "Spaghetti, 454 g 🍝",
   quantity: 2,
-  category: "dry goods",
+  category: "Dry Goods",
   };
  
 const item9 = {
-  name: "toilet paper, 12 pack 🧻",
+  name: "Toilet Paper, 12 pack 🧻",
   quantity: 1,
-  category: "household",
+  category: "Household",
   };
  
 const item10 = {
-  name: "paper towels, 6 pack",
+  name: "Paper Towels, 6 pack",
   quantity: 1,
-  category: "household",
+  category: "Household",
   };
  
 const item11 = {
-  name: "dish soap 🍽️",
+  name: "Dish Soap 🍽️",
   quantity: 1,
-  category: "household",
+  category: "Household",
   };
  
 const item12 = {
-  name: "hand soap 🧼",
+  name: "Hand Soap 🧼",
   quantity: 4,
-  category: "household",
+  category: "Household",
   };
 
-// Place items in an array.
+// Place items in an array to map through
 const groceryItems = [
   item1, item2, item3, 
   item4, item5, item6, 
