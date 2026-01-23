@@ -1,16 +1,20 @@
 /*
-Home Page Button Component
+Component: HomePageButton.js
 Author: Jenna Hackett
 Version: Jan. 23, 2026
  */
 
-import Link from "next/link";
+import { linkInfo } from "./LinkInformation";
+import PageLinks from "./PageLinks";
 
 export default function HomePageButton() {
   return (
-    <section>
-      <button className="pl-5 mt-120">
-        <Link className="text-pink-200 underline hover:text-pink-900 duration-300 ease-linear" href="/">Back to Home</Link>
+    <section className="fixed bottom-0 left-0 w-full p-6 font-bold text-lg">
+      <button>
+        <PageLinks 
+          href={linkInfo[0].href} 
+          text={linkInfo[0].text} 
+        />
       </button>
     </section>
   );

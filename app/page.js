@@ -1,9 +1,12 @@
 /* 
+.\app\page.js
 Author: Jenna Hackett
 Versions: Jan. 16, 2026
  */
 
-import Link from "next/link";
+import PageLinks from "./components/PageLinks";
+import { linkInfo } from "./components/LinkInformation";
+
 
 export default function Home() {
   return (
@@ -13,11 +16,11 @@ export default function Home() {
           CPRG306: Web Development 2 - Assignments
         </h1>
         <ul>
-          <li className = "p-3 mb-4 pb-2 text-lg light:text-pink-200"><Link className="text-pink-200 underline pl-2 hover:text-pink-900 duration-300 ease-linear" href="/week-2">
-            Week 2</Link> 
+          <li className = "p-3 pb-2 mb-4 ml-4 mr-250 mt-7 text-xl">
+            <PageLinks {...linkInfo[1]} /> 
           </li>
-          <li className = "p-3 mb-4 pb-2 text-lg light:text-pink-200"><Link className="text-pink-200 underline pl-2 hover:text-pink-900 duration-300 ease-linear" href="/week-3">
-            Week 3</Link>
+          <li className = "p-3 pb-2 mb-4 ml-4 mr-250 text-xl">
+              <PageLinks {...linkInfo[2]} />
           </li>
         </ul>
       </header>
