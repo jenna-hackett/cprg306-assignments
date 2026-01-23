@@ -17,7 +17,7 @@ export default function StudentInfo() {
         </p>
         <p className="pl-5 text-lg text-pink-200">
           GitHub:
-          <Link className="underline hover:text-pink-900" href="https://github.com/jenna-hackett/cprg306-assignments">
+          <Link className="underline hover:text-pink-900 duration-300 ease-linear" href="https://github.com/jenna-hackett/cprg306-assignments">
           cprg306-assignments
           </Link>
         </p>

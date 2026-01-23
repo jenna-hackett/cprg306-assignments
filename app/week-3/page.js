@@ -3,6 +3,7 @@ Author: Jenna Hackett
 Versions: Jan. 22, 2026
  */
 
+import HomePageButton from "../components/HomePageButton";
 import GroceryItemList from "./GroceryItemList";
 
 export default function Page() {
@@ -12,6 +13,7 @@ export default function Page() {
         Shopping List
       </h1>
       <GroceryItemList />
+      <HomePageButton />
     </main>
   )
 }
