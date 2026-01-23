@@ -16,10 +16,10 @@ export default function StudentInfo() {
         </h1>
       </header>
       <section>
-        <p className="pl-5 pb-3 text-xl text-pink-300 ">
+        <p className="pl-8 pb-6 text-xl text-pink-300">
           Name: Jenna Hackett
         </p>
-        <p className="pl-5 pb-3 text-xl text-pink-300">
+        <p className="pl-8 text-xl text-pink-300">
           GitHub Link:
             <Link className=" hover:text-pink-700 duration-300 ease-linear" 
               href="https://github.com/jenna-hackett/cprg306-assignments"

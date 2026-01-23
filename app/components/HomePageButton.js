@@ -9,7 +9,7 @@ import PageLinks from "./PageLinks";
 
 export default function HomePageButton() {
   return (
-    <section className="fixed bottom-0 left-0 w-full p-6 font-bold text-lg">
+    <section className="fixed bottom-0 p-6 font-bold text-lg">
       <button>
         <PageLinks 
           href={linkInfo[0].href} 
