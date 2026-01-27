@@ -18,7 +18,12 @@ export default function Page() {
           description="Student name and GitHub repository link for the assignments."
         />
       </header>
-      <StudentInfo />
+      <section>
+        <StudentInfo
+          name="Jenna Hackett"
+          gitHubLink="https://github.com/jenna-hackett/cprg306-assignments"
+      />
+      </section>
     </main>
   );
 }

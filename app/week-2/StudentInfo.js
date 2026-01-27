@@ -4,25 +4,18 @@ Author: Jenna Hackett
 Version: Jan. 27, 2026
  */
 
-import Link from "next/link";
+import PageLinks from "../components/PageLinks";
+import { linkInfo } from "../components/LinkInformation";
 
-export default function StudentInfo() {
+export default function StudentInfo({name}) {
   return (
-    <section>
-      {/* Student Info Component */}
-      <section className="px-4 py-4">
-        <p>
-          Name: Jenna Hackett
+    <section className="px-4 py-4 border-amber-500 border-2 rounded-md max-w-md mx-4 mt-6">
+        <h2 className="text-2xl font-bold text-indigo-900 dark:text-indigo-400 mb-2">
+          Name: <span className="text-slate-900 dark:text-white">{name}</span>
+        </h2>
+        <p className="text-slate-900 dark:text-white">
+          GitHub Link: <PageLinks {...linkInfo[4]} />
         </p>
-        <p>
-          GitHub Link:
-            <Link className="hover:text-amber-400 font-bold duration-300 ease-linear" 
-              href="https://github.com/jenna-hackett/cprg306-assignments"
-              target = "_none">
-              cprg306-assignments
-            </Link>
-        </p>
-      </section>
     </section>
 );
 }

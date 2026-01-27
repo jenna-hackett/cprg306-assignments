@@ -13,7 +13,7 @@ export default function Page() {
       <header>
         <SiteHeader />
         <PageHeader 
-          title=""
+          title="Week 4 Assignment"
           description=""
         />
       </header>

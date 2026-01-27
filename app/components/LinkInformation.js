@@ -20,5 +20,9 @@ export const linkInfo = [
     {
       href: "./week-4",
       text: "Week 4"
+    },
+    {
+      href: "https://github.com/jenna-hackett/cprg306-assignments",
+      text: "cprg306-assignments"
     }
   ];
