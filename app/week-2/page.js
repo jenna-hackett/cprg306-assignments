@@ -1,18 +1,24 @@
 /* 
-.\week-2\page.js
+app/week-2/page.js
 Author: Jenna Hackett
-Versions: Jan. 16, 2026
+Versions: Jan. 27, 2026
  */
 
-import HomePageButton from "../week-3/HomePageButton";
 import StudentInfo from "./StudentInfo";
+import SiteHeader from "../components/SiteHeader";
+import PageHeader from "../components/PageHeader";
 
 export default function Page() {
   return (
     <main>
-      {/* <h1>Shopping List</h1> Commented this out for visibility purposes.*/}
+      <header>
+        <SiteHeader />
+        <PageHeader 
+          title="Student Information"
+          description="Student name and GitHub repository link for the assignments."
+        />
+      </header>
       <StudentInfo />
-      <HomePageButton />
     </main>
   );
 }

@@ -19,14 +19,14 @@ export default function Home() {
           description="A list of links to all of the weekly assignments for the course."
         />
       </header>
-        <ul>
-          <li className="pb-6 pl-6">
+        <ul className="px-4 py-4 space-y-2">
+          <li>
             <PageLinks {...linkInfo[1]} /> 
           </li>
-          <li className="pb-6 pl-6">
+          <li>
               <PageLinks {...linkInfo[2]} />
           </li>
-          <li className="pb-6 pl-6">
+          <li>
               <PageLinks {...linkInfo[3]} />
           </li>
         </ul>

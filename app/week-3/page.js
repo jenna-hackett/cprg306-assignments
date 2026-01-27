@@ -4,22 +4,21 @@ Author: Jenna Hackett
 Version: Jan. 27, 2026
  */
 
-import HomePageButton from "./HomePageButton";
 import GroceryItemList from "./GroceryItemList";
-
+import SiteHeader from "../components/SiteHeader";
+import PageHeader from "../components/PageHeader";
 
 export default function Page() {
   return (
     <main>
       <header>
-        <h1 className = "text-center font-bold text-3xl mb-6 mt-4 text-pink-300">
-          Shopping List
-        </h1>
-
-      {/* Components being rendered */}
-      <GroceryItemList />
-      <HomePageButton />
+        <SiteHeader />
+        <PageHeader 
+          title="Shopping List"
+          description="A list of grocery items to buy this week."
+        />
       </header>
+      <GroceryItemList />
     </main>
   )
 }

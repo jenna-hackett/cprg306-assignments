@@ -10,18 +10,13 @@ export default function StudentInfo() {
   return (
     <section>
       {/* Student Info Component */}
-      <header className="p-4 mb-15 text-3xl text-center font-bold text-pink-300">
-        <h1>
-          Student Information
-        </h1>
-      </header>
-      <section className="pl-8 pb-6 text-xl text-pink-300">
-        <p className = "pb-6">
+      <section className="px-4 py-4">
+        <p>
           Name: Jenna Hackett
         </p>
-        <p className = "pb-6">
+        <p>
           GitHub Link:
-            <Link className=" hover:text-pink-700 duration-300 ease-linear" 
+            <Link className="hover:text-amber-400 font-bold duration-300 ease-linear" 
               href="https://github.com/jenna-hackett/cprg306-assignments"
               target = "_none">
               cprg306-assignments
