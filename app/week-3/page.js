@@ -6,17 +6,15 @@ Versions: Jan. 22, 2026
 
 import HomePageButton from "../components/HomePageButton";
 import GroceryItemList from "./GroceryItemList";
-// import Image from "next/image";
+
 
 export default function Page() {
   return (
     <main>
       <header>
         <h1 className = "text-center font-bold text-3xl mb-6 mt-4 text-pink-300">
-        Shopping List
-      </h1>
-
-      {/* Image Section */}
+          Shopping List
+        </h1>
 
       {/* Components being rendered */}
       <GroceryItemList />
