@@ -4,7 +4,7 @@ Author: Jenna Hackett
 Versions: Jan. 16, 2026
  */
 
-import HomePageButton from "../components/HomePageButton";
+import HomePageButton from "../week-3/HomePageButton";
 import StudentInfo from "./StudentInfo";
 
 export default function Page() {

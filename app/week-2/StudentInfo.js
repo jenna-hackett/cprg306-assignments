@@ -1,7 +1,7 @@
 /* 
 Component: StudentInfo.js
 Author: Jenna Hackett
-Versions: Jan. 23, 2026
+Version: Jan. 27, 2026
  */
 
 import Link from "next/link";

@@ -3,7 +3,7 @@ Author: Jenna Hackett
 Version: Jan. 23, 2026
  */
 
-import Item from "../components/GroceryItem";
+import Item from "./GroceryItem";
 
 export default function GroceryItemList() {
   const item1 = {

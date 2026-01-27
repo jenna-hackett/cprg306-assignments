@@ -1,20 +1,24 @@
 /* 
 .\app\page.js
 Author: Jenna Hackett
-Versions: Jan. 23, 2026
+Versions: Jan. 27, 2026
  */
 
 import PageLinks from "./components/PageLinks";
 import { linkInfo } from "./components/LinkInformation";
-
+import SiteHeader from "./components/SiteHeader";
+import PageHeader from "./components/PageHeader";
 
 export default function Home() {
   return (
     <main>
       <header>
-        <h1 className="pb-15 pt-7 text-center font-bold text-3xl text-pink-300">
-          CPRG306: Web Development II <br></br>Weekly Assignments
-        </h1>
+        <SiteHeader />
+        <PageHeader 
+          title="Weekly Assignments"
+          description="A list of links to all of the weekly assignments for the course."
+        />
+      </header>
         <ul>
           <li className="pb-6 pl-6">
             <PageLinks {...linkInfo[1]} /> 
@@ -22,8 +26,10 @@ export default function Home() {
           <li className="pb-6 pl-6">
               <PageLinks {...linkInfo[2]} />
           </li>
+          <li className="pb-6 pl-6">
+              <PageLinks {...linkInfo[3]} />
+          </li>
         </ul>
-      </header>
     </main>
   );
 }

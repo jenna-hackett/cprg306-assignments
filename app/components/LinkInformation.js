@@ -7,7 +7,7 @@ Versions: Jan. 23, 2026
 export const linkInfo = [
     { 
       href: "./", 
-      text: "Return Home" 
+      text: "Home" 
     },
     { 
       href: "./week-2", 
@@ -17,4 +17,8 @@ export const linkInfo = [
       href: "./week-3", 
       text: "Week 3" 
     },
+    {
+      href: "./week-4",
+      text: "Week 4"
+    }
   ];

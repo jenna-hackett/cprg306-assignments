@@ -1,10 +1,10 @@
 /* 
 .\week-3\page.js
 Author: Jenna Hackett
-Versions: Jan. 22, 2026
+Version: Jan. 27, 2026
  */
 
-import HomePageButton from "../components/HomePageButton";
+import HomePageButton from "./HomePageButton";
 import GroceryItemList from "./GroceryItemList";
 
 

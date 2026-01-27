@@ -1,15 +1,15 @@
 /*
 Component: HomePageButton.js
 Author: Jenna Hackett
-Version: Jan. 23, 2026
+Version: Jan. 27, 2026
  */
 
-import { linkInfo } from "./LinkInformation";
-import PageLinks from "./PageLinks";
+import { linkInfo } from "../components/LinkInformation";
+import PageLinks from "../components/PageLinks";
 
 export default function HomePageButton() {
   return (
-    <section className="fixed bottom-0 pl-6 pb-6 font-semibold">
+    <section>
       <button>
         <PageLinks 
           href={linkInfo[0].href} 
