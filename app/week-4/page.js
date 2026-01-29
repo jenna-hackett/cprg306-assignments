@@ -1,7 +1,7 @@
 /* 
 app/week-4/page.js
 Author: Jenna Hackett
-Version: Jan. 27, 2026
+Version: Jan. 29, 2026
 */
 
 import SiteHeader from "../components/SiteHeader";
@@ -13,8 +13,8 @@ export default function Page() {
       <header>
         <SiteHeader />
         <PageHeader 
-          title="Week 4 Assignment"
-          description=""
+          title="Shopping List"
+          description="A list of items to purchase for the week."
         />
       </header>
     </main>
