@@ -1,8 +1,3 @@
-/* 
-Component: SiteHeader.js
-Author: Jenna Hackett
-Version: Jan. 27, 2026
-*/
 
 import { linkInfo } from "./LinkInformation";
 import PageLinks from "./PageLinks";

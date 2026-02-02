@@ -1,8 +1,3 @@
-/* 
-app/week-2/page.js
-Author: Jenna Hackett
-Versions: Jan. 27, 2026
- */
 
 import StudentInfo from "./StudentInfo";
 import SiteHeader from "../components/SiteHeader";

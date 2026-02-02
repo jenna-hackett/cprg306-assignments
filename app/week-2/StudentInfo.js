@@ -1,8 +1,3 @@
-/* 
-Component: StudentInfo.js
-Author: Jenna Hackett
-Version: Jan. 27, 2026
- */
 
 import PageLinks from "../components/PageLinks";
 import { linkInfo } from "../components/LinkInformation";

@@ -1,7 +1,3 @@
-/* 
-Author: Jenna Hackett
-Version: Jan. 23, 2026
- */
 
 import Item from "./GroceryItem";
 

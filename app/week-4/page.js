@@ -1,11 +1,7 @@
-/* 
-app/week-4/page.js
-Author: Jenna Hackett
-Version: Jan. 29, 2026
-*/
 
 import SiteHeader from "../components/SiteHeader";
 import PageHeader from "../components/PageHeader";
+import ItemList from "./item-list";
 
 export default function Page() {
   return (
@@ -14,9 +10,10 @@ export default function Page() {
         <SiteHeader />
         <PageHeader 
           title="Shopping List"
-          description="A list of items to purchase for the week."
+          description="Items grouped by category for easier shopping."
         />
       </header>
+      <ItemList />
     </main>
   );
 }

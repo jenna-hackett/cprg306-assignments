@@ -1,8 +1,3 @@
-/* 
-Component: Grocery Item.js
-Author: Jenna Hackett
-Versions: Jan. 27, 2026
- */
 
 export default function Item({name, quantity, category}) {
   return (

@@ -1,8 +1,3 @@
-/*
-Component: PageLinks.js
-Author: Jenna Hackett
-Version: Jan. 27, 2026
-*/
 
 import Link from "next/link";
 

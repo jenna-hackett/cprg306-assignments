@@ -1,8 +1,3 @@
-/*
-Component: PageHeader.js
-Author: Jenna Hackett
-Version: Jan. 27, 2026
-*/
 
 export default function PageHeader({ title, description }) {
   return (

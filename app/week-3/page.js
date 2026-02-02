@@ -1,8 +1,3 @@
-/* 
-.\week-3\page.js
-Author: Jenna Hackett
-Version: Jan. 27, 2026
- */
 
 import GroceryItemList from "./GroceryItemList";
 import SiteHeader from "../components/SiteHeader";

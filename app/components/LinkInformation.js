@@ -1,8 +1,3 @@
-/*
-Component: LinkInformation.js
-Author: Jenna Hackett
-Versions: Jan. 27, 2026
-*/
 
 export const linkInfo = [
     { 
