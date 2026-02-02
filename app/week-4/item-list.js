@@ -20,11 +20,11 @@ export default function ItemList() {
           <div key={item.id}>
             {/* Render the category title when it's the first of its kind */}
             {isFirstOfCategory && (
-              <h2 className="text-xl font-bold text-indigo-800 capitalize mt-4 mb-4">
+              <h2 className="text-xl font-bold text-indigo-800 mb-4 mt-2">
                 {item.category}
               </h2>
             )}
-            
+
             {/* Render the Item component */}
             <Item 
               name={item.name} 

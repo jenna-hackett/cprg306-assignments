@@ -9,7 +9,7 @@ export default function Page() {
       <header>
         <SiteHeader />
         <PageHeader 
-          title="Shopping List"
+          title="Sorted Shopping List"
           description="Items grouped by category for easier shopping."
         />
       </header>
