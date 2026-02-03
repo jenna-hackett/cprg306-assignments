@@ -8,7 +8,8 @@ This repository was created to host all of the assignments that will be created 
 
 - Week 2: Creating a Next.js app
 - Week 3: A tailwind CSS styled shopping list of grocery items.
-- Week 4: ...
+- Week 4: A grocery list sorted by the category of the items. Follows the same styling as the previous week.
+- Week 5: ...
 
 ## Installation Instructions
 
