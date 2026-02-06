@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function PageLinks({href, text}) {
   return (
-    <Link className="text-amber-500 hover:text-amber-400 font-bold duration-300 ease-linear text-lg" 
+    <Link className="text-pink-400 hover:text-rose-400 text-lg font-bold transition-colors duration-300" 
       href={href}>
       {text}
     </Link>
