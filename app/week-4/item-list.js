@@ -20,7 +20,7 @@ export default function ItemList() {
           <div key={item.id}>
             {/* Render the category title when it's the first of its kind */}
             {isFirstOfCategory && (
-              <h2 className="text-xl font-bold text-indigo-800 mb-4 mt-2">
+              <h2 className="text-xl font-bold text-pink-700 mb-4 mt-2">
                 {item.category}
               </h2>
             )}
