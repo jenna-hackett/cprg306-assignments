@@ -1,5 +1,5 @@
 
-export default function Item({name, quantity, category}) {
+export default function Item({name, quantity}) {
   return (
     <section>
       <ul className = "border-amber-500 border-3 rounded-md max-w-md mx-auto p-5 mb-4">
