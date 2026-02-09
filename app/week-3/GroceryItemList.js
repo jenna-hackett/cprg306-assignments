@@ -83,17 +83,18 @@ const groceryItems = [
 ];
 
   return (
-    <main>
+    <section>
+      <h2 className="text-xl font-bold p-4 text-center">Grocery Items</h2>
       <ul>
-        {groceryItems.map((item, index) => (
+        {groceryItems.map((item) => (
           <Item 
-            key={index}
+            key={item.name}
             name={item.name}
             quantity={item.quantity}
             category={item.category}
           />
         ))}
       </ul>
-    </main>
+    </section>
   );
 }
