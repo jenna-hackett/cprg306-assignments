@@ -1,5 +1,6 @@
 import SiteHeader from "../components/SiteHeader";
 import PageHeader from "../components/PageHeader";
+import NewItem from "./NewItem";
 
 export default function Page() {
   return (
@@ -7,10 +8,11 @@ export default function Page() {
       <header>
         <SiteHeader />
         <PageHeader 
-          title="Week 5"
-          description="Week 5 assignment."
+          title="Basic Interactivity with Forms"
+          description="xyz"
         />
       </header>
+      <NewItem />
     </main>
   );
 }
