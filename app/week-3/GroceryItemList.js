@@ -84,7 +84,7 @@ const groceryItems = [
 
   return (
     <section>
-      <h2 className="text-xl font-bold p-4 text-center">Grocery Items</h2>
+      <h2 className="text-2xl font-bold p-4 text-center">Grocery Items</h2>
       <ul>
         {groceryItems.map((item) => (
           <Item 
