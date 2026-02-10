@@ -8,13 +8,18 @@ export default function NewItem() {
   const [category, setCategory] = useState("Produce");
 
   // Form submission handler. Will alert the form data and reset the form.
-  function formSubmit(e) {
+  function handleSubmit(e) {
+    // Ensures the page does not reload.
     e.preventDefault();
+    // Create the item object and log it to the console.
+    const item = { name, quantity, category };
+    console.log("New item:", item);
+    // Alerts user an item was added with their provided data.
     alert(`Name: ${name}\nQuantity: ${quantity}\nCategory: ${category}`);
     resetForm();
   }
 
-  // Reset form function. Resets the form after submission.
+  // Reset form function. Resets the form after submission to original values.
   function resetForm() {
     setName("");
     setQuantity(1);
@@ -23,12 +28,12 @@ export default function NewItem() {
 
   return (
     <form
-      onSubmit={formSubmit}
-      className="max-w-md mx-auto p-4 border-2 border-rose-400 rounded-lg bg-pink-900 text-white"
+      onSubmit={handleSubmit}
+      className="max-w-md mx-auto mt-10 p-4 border-2 border-rose-400 rounded-lg bg-pink-900 text-white"
     >
       <h2 className="text-2xl font-bold mb-4 text-pink-200">Add New Item</h2>
 
-      {/* Name */}
+      {/* Item Name */}
       <div className="mb-4">
         <label htmlFor="name" className="block mb-1">Item Name:</label>
         <input
@@ -44,7 +49,7 @@ export default function NewItem() {
 
       {/* Quantity/Category Row */}
       <div className="mb-4 flex gap-4">
-        {/* Quantity */}
+        {/* Item Quantity */}
         <div className="flex-1">
           <label htmlFor="quantity" className="block mb-1">Quantity:</label>
           <input
@@ -58,7 +63,7 @@ export default function NewItem() {
           />
         </div>
 
-        {/* Category */}
+        {/* Item Category */}
         <div className="flex-1">
           <label htmlFor="category" className="block mb-1">Category:</label>
           <select
@@ -80,6 +85,7 @@ export default function NewItem() {
 
       <button
         type="submit"
+        // Disable the button if the name input is empty or just whitespace.
         disabled={!name.trim()}
         className="w-full bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md disabled:opacity-60"
       >

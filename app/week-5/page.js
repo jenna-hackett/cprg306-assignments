@@ -9,7 +9,7 @@ export default function Page() {
         <SiteHeader />
         <PageHeader 
           title="Basic Interactivity with Forms"
-          description="xyz"
+          description="A simple form to add items to a shopping list using name, quantity and category properties."
         />
       </header>
       <NewItem />
