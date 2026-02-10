@@ -7,7 +7,7 @@ export default function Page() {
       <header>
         <SiteHeader />
         <PageHeader 
-          title="Interactivity With Forms"
+          title="Form Interactivity"
           description="XYZ"
         />
       </header>
