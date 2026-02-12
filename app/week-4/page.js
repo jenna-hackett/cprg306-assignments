@@ -1,7 +1,7 @@
 
 import SiteHeader from "../components/SiteHeader";
 import PageHeader from "../components/PageHeader";
-import ItemList from "./item-list";
+import ItemList from "./itemList";
 
 export default function Page() {
   return (
