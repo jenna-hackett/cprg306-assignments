@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function NewItem() {
+export default function NewItem({ onAddItem }) {
   // Initialize state for the form inputs.
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(1);
@@ -11,11 +11,11 @@ export default function NewItem() {
   function handleSubmit(e) {
     // Ensures the page does not reload.
     e.preventDefault();
-    // Create the item object and log it to the console.
-    const item = { name, quantity, category };
-    console.log("New item:", item);
-    // Alerts user an item was added with their provided data.
-    alert(`Name: ${name}\nQuantity: ${quantity}\nCategory: ${category}`);
+    // Generate random ID for new item.
+    const id = crypto.randomUUID();
+    // Create the item object, send to parent and reset the form.
+    const item = { id, name, quantity, category };
+    onAddItem(item);
     resetForm();
   }
 
