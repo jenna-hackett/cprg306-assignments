@@ -1,6 +1,6 @@
 import SiteHeader from "../components/SiteHeader";
 import PageHeader from "../components/PageHeader";
-import NewItem from "./NewItem";
+import NewItem from "./new-item";
 
 export default function Page() {
   return (
