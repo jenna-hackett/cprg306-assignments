@@ -7,7 +7,6 @@ export default function NewItem({ onAddItem }) {
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState("Produce");
 
-  // Form submission handler. Will alert the form data and reset the form.
   function handleSubmit(e) {
     // Ensures the page does not reload.
     e.preventDefault();
@@ -19,7 +18,7 @@ export default function NewItem({ onAddItem }) {
     resetForm();
   }
 
-  // Reset form function. Resets the form after submission to original values.
+  // Resets the form after submission to original values.
   function resetForm() {
     setName("");
     setQuantity(1);
