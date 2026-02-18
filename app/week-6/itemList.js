@@ -14,6 +14,7 @@ export default function ItemList({ items }) {
     }
     return a.category.localeCompare(b.category, undefined, { sensitivity: "base" });
   });
+  
 
   const btn = "px-3 py-1 rounded-md border border-rose-400 text-white transition-colors";
   const active = "bg-pink-700";
