@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import itemData from "./items.json";
-import NewItem from "./newItem.js";
+import NewItem from "./newItem";
 import ItemList from "./itemList.js";
 import SiteHeader from "../components/SiteHeader";
 import PageHeader from "../components/PageHeader";
