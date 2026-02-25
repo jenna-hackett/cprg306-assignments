@@ -7,6 +7,12 @@ import NewItem from "./NewGroceryItem";
 import ItemList from "./GroceryItemList";
 
 export default function Page() {
+  const [items, setItems] = useState(itemData);
+
+  function handleAddItem(newItem) {
+    setItems((prev) => [newItem, ...prev]);
+  }
+
   return (
     <main>
       <header>
@@ -16,6 +22,8 @@ export default function Page() {
           description="Managing State"
         />
       </header>
+      <NewItem onAddItem={handleAddItem}/>
+      <ItemList items={items}/>
     </main>
   )
 }

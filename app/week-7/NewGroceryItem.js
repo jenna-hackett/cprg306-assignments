@@ -8,17 +8,16 @@ export default function NewItem({ onAddItem }) {
   const [category, setCategory] = useState("Produce");
 
   function handleSubmit(e) {
-    // Ensures the page does not reload.
+    // Ensures the page does not reload and create new ID for the item.
     e.preventDefault();
-    // Generate random ID for new item.
     const id = crypto.randomUUID();
-    // Create the item object, send to parent and reset the form.
+    // Create the item object and reset the form.
     const item = { id, name, quantity, category };
     onAddItem(item);
     resetForm();
   }
 
-  // Resets the form after submission to original values.
+  // Reset for function.
   function resetForm() {
     setName("");
     setQuantity(1);
