@@ -56,6 +56,7 @@ return (
                 name={item.name}
                 quantity={item.quantity}
                 category={item.category}
+                hideCategory={sortBy === "category"}
               />
             </li>
           );
