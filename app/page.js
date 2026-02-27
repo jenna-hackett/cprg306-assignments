@@ -19,7 +19,7 @@ export default function Home() {
           description="A list of links to all of the weekly assignments for the course."
         />
       </header>
-        <ul className="px-4 py-4 space-y-2">
+        <ul className="px-4 py-4 grid grid-cols-1 sm:grid-cols02 gap-4 max-w-md">
           <li>
             <PageLinks {...linkInfo[1]} /> 
           </li>
