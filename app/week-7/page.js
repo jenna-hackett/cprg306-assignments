@@ -19,9 +19,7 @@ export default function Page() {
         <SiteHeader />
         <PageHeader 
           title="Managing State"
-          description="Merging the functionalities developed during Week 4 and Week 5 into a single, 
-          interactive shopping list application. The application will consist of a form for adding 
-          new items and a sortable list for displaying these items."
+          description="Merging the functionalities developed during Week 4, 5 and 6 into a single, interactive shopping list application. The application will consist of a form for adding new items and a sortable list for displaying these items."
         />
       </header>
       <NewItem onAddItem={handleAddItem}/>

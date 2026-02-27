@@ -48,7 +48,7 @@ return (
           (index === 0 || item.category !== sortedItems[index - 1].category);
 
           return (
-            <div key={item.id}>
+            <li key={item.id}>
               {showHeader && (
                 <h2 className="text-xl font-bold text-pink-700 mb-4 mt-2 text-center">
                   {item.category}
@@ -60,7 +60,7 @@ return (
                 quantity={item.quantity}
                 category={item.category}
               />
-            </div>
+            </li>
           );
         })}
       </ul>
