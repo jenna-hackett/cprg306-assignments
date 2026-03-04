@@ -1,14 +1,14 @@
 "use client";
 import { useState } from "react";
 
-export default function NewItem({ onAddItem }) {
-  // Define state for easy reset.
+// Define state for easy reset.
   const initialState ={
     name: "",
     quantity: 1,
     category: "Produce",
   }
 
+export default function NewItem({ onAddItem }) {
   // Merge into single state object
   const [item, setItem] = useState(initialState);
 
