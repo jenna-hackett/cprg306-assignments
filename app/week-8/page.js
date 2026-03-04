@@ -2,7 +2,6 @@
 import SiteHeader from "../components/SiteHeader";
 import PageHeader from "../components/PageHeader";
 
-
 export default function Page() {
   return (
     <main>

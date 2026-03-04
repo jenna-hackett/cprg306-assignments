@@ -2,26 +2,35 @@
 import { useState } from "react";
 
 export default function NewItem({ onAddItem }) {
-  // Initialize state for the form inputs.
-  const [name, setName] = useState("");
-  const [quantity, setQuantity] = useState(1);
-  const [category, setCategory] = useState("Produce");
-
-  function handleSubmit(e) {
-    // Ensures the page does not reload and create new ID for the item.
-    e.preventDefault();
-    const id = crypto.randomUUID();
-    // Create the item object and reset the form.
-    const item = { id, name, quantity, category };
-    onAddItem(item);
-    resetForm();
+  // Define state for easy reset.
+  const initialState ={
+    name: "",
+    quantity: 1,
+    category: "Produce",
   }
 
-  // Reset for function.
-  function resetForm() {
-    setName("");
-    setQuantity(1);
-    setCategory("Produce");
+  // Merge into single state object
+  const [item, setItem] = useState(initialState);
+
+  // Reusable event handler
+  const handleChange = (e) => {
+    const { name, value, type } = e.target;
+    setItem((prev) => ({
+      ...prev,
+      [name]: type === "number" ? Number(value) : value,
+    }));
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    
+    const newItem = { 
+      ...item,
+      id: crypto.randomUUID()
+     };
+
+    onAddItem(newItem);
+    setItem(initialState); // Reset form after submission
   }
 
   return (
@@ -37,9 +46,10 @@ export default function NewItem({ onAddItem }) {
         <input
           type="text"
           id="name"
+          name="name" // Must match key in state for handleChange to work
           required
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={item.name}
+          onChange={handleChange}
           className="w-full p-2 rounded-md border border-rose-400 bg-pink-800 text-white"
           placeholder="e.g., Sourdough Bread"
         />
@@ -53,10 +63,11 @@ export default function NewItem({ onAddItem }) {
           <input
             type="number"
             id="quantity"
+            name="quantity" // Must match key in state for handleChange to work
             min={1}
             max={99}
-            value={quantity}
-            onChange={(e) => setQuantity(Number(e.target.value))}
+            value={item.quantity}
+            onChange={handleChange}
             className="w-full p-2 rounded-md border border-rose-400 bg-pink-800 text-white"
           />
         </div>
@@ -66,8 +77,9 @@ export default function NewItem({ onAddItem }) {
           <label htmlFor="category" className="block mb-1">Category:</label>
           <select
             id="category"
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
+            name="category" // Must match key in state for handleChange to work
+            value={item.category}
+            onChange={handleChange}
             className="w-full p-2 rounded-md border border-rose-400 bg-pink-800 text-white"
           >
             <option value="Produce">Produce</option>
@@ -84,7 +96,7 @@ export default function NewItem({ onAddItem }) {
       <button
         type="submit"
         // Disable the button if the name input is empty or just whitespace.
-        disabled={!name.trim()}
+        disabled={!item.name.trim()}
         className="w-full bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded-md disabled:opacity-60"
       >
         Add Item
