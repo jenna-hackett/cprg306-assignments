@@ -30,8 +30,8 @@ export default function Page() {
       <header>
         <SiteHeader />
         <PageHeader 
-          title="Fetching Data"
-          description="In the Week 8 assignment, functionality is extended by integrating third-party APIs to suggest meal ideas based on the items in the user's shopping list. This involves fetching data from an external API, handling asynchronous operations, and updating the UI accordingly."
+          title="Week 9"
+          description="Week 9 Assignment"
         />
       </header>
 
