@@ -45,7 +45,7 @@ export default function Page() {
 
         {/* Meal Ideas */}
         <div className="flex-1">
-          <div className="sticky top-5">
+          <div>
             <MealIdeas ingredient={selectedItemName} />
           </div>
         </div>
