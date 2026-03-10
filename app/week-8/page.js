@@ -18,8 +18,8 @@ export default function Page() {
       <header>
         <SiteHeader />
         <PageHeader 
-          title="Managing State"
-          description="Merging the functionalities developed during Week 4, 5 and 6 into a single, interactive shopping list application. The application will consist of a form for adding new items and a sortable list for displaying these items."
+          title="Fetching Data"
+          description="In the Week 8 assignment, functionality is extended by integrating third-party APIs to suggest meal ideas based on the items in the user's shopping list. This involves fetching data from an external API, handling asynchronous operations, and updating the UI accordingly."
         />
       </header>
       <NewItem onAddItem={handleAddItem}/>
