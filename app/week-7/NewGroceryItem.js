@@ -2,11 +2,11 @@
 import { useState } from "react";
 
 // Define state for easy reset.
-  const initialState ={
-    name: "",
-    quantity: 1,
-    category: "Produce",
-  }
+const initialState = {
+  name: "",
+  quantity: 1,
+  category: "Produce",
+}
 
 export default function NewItem({ onAddItem }) {
   // Merge into single state object
@@ -23,11 +23,11 @@ export default function NewItem({ onAddItem }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    
-    const newItem = { 
+
+    const newItem = {
       ...item,
       id: crypto.randomUUID()
-     };
+    };
 
     onAddItem(newItem);
     setItem(initialState); // Reset form after submission
