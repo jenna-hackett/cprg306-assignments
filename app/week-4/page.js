@@ -1,6 +1,6 @@
 
-import SiteHeader from "../components/SiteHeader";
-import PageHeader from "../components/PageHeader";
+import SiteHeader from "@/app/components/SiteHeader";
+import PageHeader from "@/app/components/PageHeader";
 import ItemList from "./itemList";
 
 export default function Page() {

@@ -3,8 +3,8 @@ import { useState } from "react";
 import itemData from "./items.json";
 import NewItem from "./newItem";
 import ItemList from "./itemList.js";
-import SiteHeader from "../components/SiteHeader";
-import PageHeader from "../components/PageHeader";
+import SiteHeader from "@/app/components/SiteHeader";
+import PageHeader from "@/app/components/PageHeader";
 
 export default function Page() {
   const [items, setItems] = useState(itemData);

@@ -1,7 +1,7 @@
 
 import StudentInfo from "./StudentInfo";
-import SiteHeader from "../components/SiteHeader";
-import PageHeader from "../components/PageHeader";
+import SiteHeader from "@/app/components/SiteHeader";
+import PageHeader from "@/app/components/PageHeader";
 
 export default function Page() {
   return (
