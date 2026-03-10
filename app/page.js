@@ -1,9 +1,3 @@
-/* 
-.\app\page.js
-Author: Jenna Hackett
-Versions: Jan. 27, 2026
- */
-
 import PageLinks from "./components/PageLinks";
 import { linkInfo } from "./components/LinkInformation";
 import SiteHeader from "./components/SiteHeader";
@@ -46,5 +40,5 @@ export default function Home() {
           </li>
         </ul>
     </main>
-  );
+  )
 }
