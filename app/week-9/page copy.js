@@ -3,9 +3,9 @@ import { useState } from "react";
 import SiteHeader from "../components/SiteHeader";
 import PageHeader from "../components/PageHeader";
 import itemData from "./grocery-items.json";
-import NewItem from "./NewGroceryItem";
-import ItemList from "./GroceryItemList";
-import MealIdeas from "./MealIdeas";
+import NewItem from "./shopping-list/NewGroceryItem";
+import ItemList from "./shopping-list/GroceryItemList";
+import MealIdeas from "./shopping-list/MealIdeas";
 
 export default function Page() {
   const [items, setItems] = useState(itemData);
