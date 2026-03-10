@@ -9,5 +9,5 @@ export default function PageLinks({href, text, className}) {
     >
       {text}
     </Link>
-  );
+  )
 }
