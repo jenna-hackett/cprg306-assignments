@@ -34,7 +34,7 @@ export default function MealIdeas({ ingredient }) {
 
 
   return (
-    <div className="bg-pink-900 border-rose-400 border-2 rounded-lg p-5 mb-4 max-w-md mt-9 mx-auto">
+    <div className="bg-pink-900 border-rose-400 border-2 rounded-lg p-5 mb-4 max-w-md mt-9 mx-8">
       <h2 className="text-2xl font-bold text-pink-200 mb-2">Meal Ideas</h2>
       {/* No ingredient is selected */}
       {!ingredient ? (
