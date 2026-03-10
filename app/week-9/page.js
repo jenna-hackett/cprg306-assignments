@@ -17,4 +17,4 @@ await firebaseSignOut();
 // Display some of the user's information
 <p>
   Welcome, {user.displayName} ({user.email})
-</p>;
+</p>
