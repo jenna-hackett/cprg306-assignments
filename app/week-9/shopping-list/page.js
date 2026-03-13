@@ -6,6 +6,7 @@ import itemData from "./grocery-items.json";
 import NewItem from "./NewGroceryItem";
 import ItemList from "./GroceryItemList";
 import MealIdeas from "./MealIdeas";
+//import { useUserAuth } from "../contexts/AuthContext";
 
 export default function Page() {
   const [items, setItems] = useState(itemData);
