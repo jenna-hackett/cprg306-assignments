@@ -36,8 +36,4 @@ export const linkInfo = [
       href: "./week-8",
       text: "Week 8"
     },
-    {
-      href: "./week-9",
-      text: "Week 9"
-    }
   ]
