@@ -9,6 +9,7 @@ export default function Page() {
   // Use the useUserAuth hook to access the user object and authentication functions.
   const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
 
+  // Handle the sign-in process when the user clicks the sign-in button.
   const handleSignIn = async () => {
     try {
       await gitHubSignIn();
@@ -17,6 +18,7 @@ export default function Page() {
     }
   }
 
+  // Render the main content of the page, including the header and the authentication components.
   return (
     <main className="min-h-screen">
       <header>
@@ -36,7 +38,6 @@ export default function Page() {
           <LoggedUser user={user} onSignOut={firebaseSignOut} />
         )}
       </div>
-
     </main>
   );
 }

@@ -8,25 +8,30 @@ import ItemList from "./GroceryItemList";
 import MealIdeas from "./MealIdeas";
 
 export default function Page() {
+
+  // State to hold the list of items and the currently selected item name for fetching meal ideas.
   const [items, setItems] = useState(itemData);
   const [selectedItemName, setSelectedItemName] = useState("");
 
+  // Handles the addition of an item to the shopping list by updating the state.
   function handleAddItem(newItem) {
     setItems((prev) => [...prev, newItem]);
   }
 
+  // Handles the selection of an item from the list, processes the item name to remove any punctuation and whitespace,
+  // and updates the selected item name state for fetching meal ideas.
   const handleItemSelect = (item) => {
     const cleanName = item
-      .split(",")[0] // Get the part before any comma
-      .replace(/[^\w\s]|_/g, "") // Remove any punctuation
-      .trim(); // Remove any  whitespace
+      .split(",")[0] // Part before any commas.
+      .replace(/[^\w\s]|_/g, "") // Remove any punctuation.
+      .trim(); // Remove any whitespace.
 
+    // Update the selected item name state with the cleaned name.
     setSelectedItemName(cleanName);
   }
 
   return (
     <main>
-
       <header>
         <SiteHeader />
         <PageHeader 
@@ -50,7 +55,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-
     </main>
   )
 }
