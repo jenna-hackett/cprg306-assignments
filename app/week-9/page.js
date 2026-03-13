@@ -3,6 +3,7 @@ import { useUserAuth } from "../contexts/AuthContext";
 import SiteHeader from "@/app/components/SiteHeader";
 import PageHeader from "@/app/components/PageHeader";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Page() {
   // Use the useUserAuth hook to access the user object and authentication functions.
@@ -47,10 +48,12 @@ export default function Page() {
             <div className="bg-pink-900 border-4 border-rose-400 rounded-lg p-8 shadow-xl text-center">
               <div className="flex flex-col items-center gap-4">
                 {user.photoURL && (
-                  <img 
+                  <Image 
                     src={user.photoURL} 
                     alt={user.displayName} 
-                    className="w-20 h-20 rounded-full border-2 border-pink-200 shadow-md"
+                    width={80}  // 80px corresponds to w-20
+                    height={80} // 80px corresponds to h-20
+                    className="rounded-full border-2 border-pink-200 shadow-md"
                   />
                 )}
                 <h2 className="text-2xl font-bold text-pink-200">
