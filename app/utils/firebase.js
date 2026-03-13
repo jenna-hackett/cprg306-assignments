@@ -20,3 +20,29 @@
 //   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 //   measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID
 // };
+
+
+// GOOOOOOOOOOOOD DATA BELOW
+
+
+// // Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+
+// // Your web app's Firebase configuration
+// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//   apiKey: "AIzaSyANTxfzCT9eBmqEKnSrjla_387FaS4OguI",
+//   authDomain: "cprg306-assignments-af649.firebaseapp.com",
+//   projectId: "cprg306-assignments-af649",
+//   storageBucket: "cprg306-assignments-af649.firebasestorage.app",
+//   messagingSenderId: "789555099179",
+//   appId: "1:789555099179:web:55a7bac36582e984029c6e",
+//   measurementId: "G-V9N355S497"
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
