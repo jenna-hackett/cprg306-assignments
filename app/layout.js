@@ -23,7 +23,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <AuthContextProvider>{children}</AuthContextProvider> */}
+        {/* Render the actual page content here */}
+        {children} 
       </body>
     </html>
   );
