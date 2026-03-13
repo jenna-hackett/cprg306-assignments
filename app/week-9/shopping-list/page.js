@@ -3,8 +3,6 @@ import { useState } from "react";
 import { useUserAuth } from "../../contexts/AuthContext"; 
 import SiteHeader from "@/app/components/SiteHeader";
 import PageHeader from "@/app/components/PageHeader";
-
-// Note: If these files are in the 'week-9' folder, ensure these paths are correct
 import itemData from "./grocery-items.json"; 
 import NewItem from "./NewGroceryItem";
 import ItemList from "./GroceryItemList";
@@ -16,7 +14,12 @@ export default function Page() {
   const [items, setItems] = useState(itemData);
   const [selectedItemName, setSelectedItemName] = useState("");
 
-  // Access Control
+  //TODO: See Below.
+  // Add a logout button to the shopping list page.
+  // Add a profile page that displays the user's profile information.
+  // Add other OAuth providers such as Google.
+
+ // Access Control
   if (!user) {
     return (
       <main className="min-h-screen bg-black">
