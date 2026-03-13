@@ -35,8 +35,8 @@ export default function Page() {
       <header>
         <SiteHeader />
         <PageHeader 
-          title="Fetching Data"
-          description="In the Week 8 assignment, functionality is extended by integrating third-party APIs to suggest meal ideas based on the items in the user's shopping list. This involves fetching data from an external API, handling asynchronous operations, and updating the UI accordingly."
+          title="Shopping List with Meal Ideas"
+          description="Week 9 focuses on integrating Firebase Authentication. This update secures the application by requiring users to authenticate via GitHub before gaining access to the personal shopping list and meal ideas."
         />
       </header>
 

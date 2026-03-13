@@ -23,7 +23,7 @@ export default function LoggedUser({ user, onSignOut }) {
 
         <div className="flex flex-wrap gap-4 justify-center mt-8">
           <Link 
-            href="/week-8" 
+            href="/week-9/shopping-list" 
             className="bg-pink-600 text-white font-bold py-2 px-6 rounded-md border-2 border-rose-400 transform hover:scale-105 active:scale-95 cursor-pointer"
           >
             Go to Shopping List
