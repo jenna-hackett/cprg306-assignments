@@ -69,7 +69,7 @@ export default function Page() {
                 
                 <button 
                   onClick={firebaseSignOut} 
-                  className="bg-pink-600 text-white font-bold py-2 px-6 rounded-md border-2 border-rose-400 cursor-pointer transition-all transform hover:scale-105 active:scale-95"
+                  className="bg-pink-600 text-white font-bold py-2 px-6 rounded-md border-2 border-rose-400 cursor-pointer transform hover:scale-105 active:scale-95"
                 >
                   Sign Out
                 </button>

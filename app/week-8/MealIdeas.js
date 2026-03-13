@@ -54,7 +54,7 @@ export default function MealIdeas({ ingredient }) {
               {meals.map((meal) => (
                 <li 
                   key={meal.idMeal} 
-                  className="p-3 bg-pink-800 border-2 border-rose-300 rounded-md text-white hover:bg-pink-700 transition-colors cursor-pointer"
+                  className="p-3 bg-pink-800 border-2 border-rose-300 rounded-md text-white hover:bg-pink-700 transition-colors"
                 >
                   {meal.strMeal}
                 </li>
