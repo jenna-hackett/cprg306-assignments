@@ -60,7 +60,6 @@ export default function Page() {
     setSelectedItemName(cleanName);
   }
 
-
   return (
     <main className="min-h-screen bg-black text-white">
       <header>
