@@ -1,7 +1,8 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useUserAuth } from "../../contexts/AuthContext"; 
 import { useRouter } from "next/navigation";
+import { getItems, addItem, deleteItem } from "../_services/shopping-list-service";
 import SiteHeader from "@/app/components/SiteHeader";
 import PageHeader from "@/app/components/PageHeader";
 import NewItem from "./NewGroceryItem";
@@ -10,11 +11,40 @@ import MealIdeas from "./MealIdeas";
 import Link from "next/link";
 
 export default function Page() {
-  const { user } = useUserAuth();
+  const { user, firebaseSignOut } = useUserAuth();
   const router = useRouter();
-  const [items, setItems] = useState(itemData);
+  const [items, setItems] = useState([]);
   const [selectedItemName, setSelectedItemName] = useState("");
 
+  // Helper function for adding item.
+  const handleAddItem = async (newItem) => {
+  try {
+    if (user) {
+      const newItemId = await addItem(user.uid, newItem);
+
+      const itemWithId = {
+        ...newItem,
+        id: newItemId
+      };
+
+      setItems((prevItems) => [...prevItems, itemWithId]);
+    }
+  } catch (error) {
+    console.error("Error adding item to Firestore: ", error);
+  }
+  };
+
+  // Helper function for item selection.
+  const handleItemSelect = (item) => {
+    const cleanName = item
+      .split(",")[0] 
+      .replace(/[^\w\s]|_/g, "") 
+      .trim(); 
+
+    setSelectedItemName(cleanName);
+  }
+
+  // Helper function for signout.
   const handleSignOut = async () => {
     try {
       await firebaseSignOut();
@@ -24,7 +54,24 @@ export default function Page() {
     }
   }
 
-  //TODO
+  // Add useEffect hook, declaring and calling the loadItems function inside.
+  useEffect(() => {
+    const loadItems = async () => {
+      try {
+        if (user) {
+          const fetchedItems = await getItems(user.uid);
+          setItems(fetchedItems);
+        }
+      } catch (error) {
+        console.error("Error loading items: ", error);
+      }
+    };
+    if (user) {
+      loadItems();
+    }
+  }, [user]); 
+
+  // TODO
   // Add a profile page that displays the user's profile information.
   // Add other OAuth providers such as Google
 
@@ -44,19 +91,6 @@ export default function Page() {
         </div>
       </main>
     );
-  }
-
-  function handleAddItem(newItem) {
-    setItems((prev) => [...prev, newItem]);
-  }
-
-  const handleItemSelect = (item) => {
-    const cleanName = item
-      .split(",")[0] 
-      .replace(/[^\w\s]|_/g, "") 
-      .trim(); 
-
-    setSelectedItemName(cleanName);
   }
 
   return (

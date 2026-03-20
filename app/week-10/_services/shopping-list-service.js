@@ -1,10 +1,11 @@
 import { db } from "../utils/firebase";
-import { collection, getDocs, addDoc, query } from "firebase/firestore";
+import { collection, getDocs, addDoc, doc, deleteDoc } from "firebase/firestore";
 
+// getItems function.
  export async function getItems (userId) {
    try {
-    const itemsCollectionRef = collection(db, "users", userId, "items");
-     const querySnapshot = await getDocs(itemsCollectionRef);
+    const itemsReference = collection(db, "users", userId, "items");
+     const querySnapshot = await getDocs(itemsReference);
 
      return querySnapshot.docs.map((doc) => ({
        id: doc.id,
@@ -16,10 +17,11 @@ import { collection, getDocs, addDoc, query } from "firebase/firestore";
    }
  };
 
+ // addItem function.
  export async function addItem (userId, item) {
   try {
-    const itemsCollectionRef = collection(db, "users", userId, "items");
-    const docRef = await addDoc((itemsCollectionRef), item);
+    const itemsReference = collection(db, "users", userId, "items");
+    const docRef = await addDoc((itemsReference), item);
     
     return docRef.id; // return new document ID.
   } catch (error) {
