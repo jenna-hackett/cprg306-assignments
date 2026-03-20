@@ -4,7 +4,6 @@ import { useUserAuth } from "../../contexts/AuthContext";
 import { useRouter } from "next/navigation";
 import SiteHeader from "@/app/components/SiteHeader";
 import PageHeader from "@/app/components/PageHeader";
-import itemData from "./grocery-items.json"; 
 import NewItem from "./NewGroceryItem";
 import ItemList from "./GroceryItemList";
 import MealIdeas from "./MealIdeas";
