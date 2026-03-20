@@ -4,6 +4,9 @@ import { getAuth } from "firebase/auth";
 // import analytics
 import { getAnalytics } from "firebase/analytics";
 
+// import firestore
+import { getFirestore } from "firebase/firestore";
+
 // set up the configuration for env variables to connect the app to the backend
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -25,3 +28,5 @@ if (typeof window !== "undefined") {
 }
 
 export { app, analytics, auth };
+
+export const db = getFirestore(app);

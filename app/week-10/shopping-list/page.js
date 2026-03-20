@@ -17,7 +17,7 @@ export default function Page() {
   //TODO: See Below.
   // Add a logout button to the shopping list page.
   // Add a profile page that displays the user's profile information.
-  // Add other OAuth providers such as Google.
+  // Add other OAuth providers such as Google
 
  // Access Control
   if (!user) {

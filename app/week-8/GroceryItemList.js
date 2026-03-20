@@ -40,7 +40,7 @@ return (
         </button>
       </div>
 
-      <ul className="list-none p-0">
+      <ul className="list-none p-0 ">
         {sortedItems.map((item, index) => {
           const showHeader = sortBy === "category" &&
           (index === 0 || item.category !== sortedItems[index - 1].category);
