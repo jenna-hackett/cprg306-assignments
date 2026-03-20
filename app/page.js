@@ -39,6 +39,9 @@ export default function Home() {
           <li>
               <PageLinks {...linkInfo[9]} />
           </li>
+          <li>
+              <PageLinks {...linkInfo[10]} />
+          </li>
         </ul>
     </main>
   )
