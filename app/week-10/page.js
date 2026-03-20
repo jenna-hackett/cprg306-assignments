@@ -24,8 +24,8 @@ export default function Page() {
       <header>
         <SiteHeader />
         <PageHeader 
-          title="WEEK 10"
-          description="Week 10 assignment."
+          title="Cloud Firestore"
+          description="DESCRIPTIONNNNNNNNNNNNNNN"
         />
       </header>
 
