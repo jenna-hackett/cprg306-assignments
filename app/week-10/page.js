@@ -25,7 +25,7 @@ export default function Page() {
         <SiteHeader />
         <PageHeader 
           title="Cloud Firestore"
-          description="DESCRIPTIONNNNNNNNNNNNNNN"
+          description="This project showcases how to build a real-world app that remembers who you are and keeps your data safe in the cloud. It highlights how to connect a React interface to a live database so that your grocery list stays saved even if you refresh the page or switch devices."
         />
       </header>
 
@@ -35,7 +35,7 @@ export default function Page() {
           <LogInUser onSignIn={handleSignIn} />
         ) : (
           /* LOGGED IN */
-          <LoggedUser user={user} onSignOut={firebaseSignOut} />
+          <LoggedUser user={user} onSignOut={firebaseSignOut} listPath={"/week-10/shopping-list"}/>
         )}
       </div>
     </main>

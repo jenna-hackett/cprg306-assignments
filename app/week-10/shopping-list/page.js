@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { useUserAuth } from "../../contexts/AuthContext"; 
 import { useRouter } from "next/navigation";
-import { getItems, addItem, deleteItem } from "../_services/shopping-list-service";
+import { getItems, addItem } from "../_services/shopping-list-service";
 import SiteHeader from "@/app/components/SiteHeader";
 import PageHeader from "@/app/components/PageHeader";
 import NewItem from "./NewGroceryItem";
@@ -48,7 +48,7 @@ export default function Page() {
   const handleSignOut = async () => {
     try {
       await firebaseSignOut();
-      router.push("/week-9"); // Redirect to login page after signing out
+      router.push("/week-10"); // Redirect to login page after signing out
     } catch (error) {
       console.error("Error signing out:", error);
     }
@@ -94,13 +94,23 @@ export default function Page() {
   }
 
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="relative min-h-screen bg-black text-white">
       <header>
         <SiteHeader />
         <PageHeader 
           title="Shopping List with Meal Ideas"
           description="Manage your grocery items and get meal ideas based on your shopping list."
         />
+
+        {/* Sign Out Button */}
+        <div className="absolute top-20 right-5 z-50">
+          <button 
+            onClick={handleSignOut}
+            className="bg-pink-900 text-white font-bold py-2 px-4 rounded-full border-2 border-rose-400 hover:bg-pink-600 transition-all shadow-lg text-sm cursor-pointer"
+          >
+            Sign Out
+          </button>
+        </div>
       </header>
 
       <div className="flex flex-col md:flex-row gap-10 p-5">
@@ -113,12 +123,6 @@ export default function Page() {
           <MealIdeas ingredient={selectedItemName} />
         </div>
       </div>
-
-      {/* Sign Out Button */}
-      <button href="/week-9" className="bg-pink-900 text-white font-bold py-2 px-6 rounded-full border-2 border-rose-400 hover:bg-pink-600 transition-colors"
-        onClick={handleSignOut}>
-        Sign Out
-      </button>
     </main>
   );
 }

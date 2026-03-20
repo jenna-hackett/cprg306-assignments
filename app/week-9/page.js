@@ -35,7 +35,7 @@ export default function Page() {
           <LogInUser onSignIn={handleSignIn} />
         ) : (
           /* LOGGED IN */
-          <LoggedUser user={user} onSignOut={firebaseSignOut} />
+          <LoggedUser user={user} onSignOut={firebaseSignOut} listPath={"/week-9/shopping-list"} />
         )}
       </div>
     </main>
