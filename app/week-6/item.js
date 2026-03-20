@@ -1,12 +1,13 @@
-
-export default function Item({name, quantity, category,hideCategory}) {
+export default function Item({name, quantity, category, hideCategory}) {
   return (
-    <li className = "border-rose-400 border-4 rounded-lg max-w-md mx-auto p-5 mb-4 bg-pink-900">
-      <h3 className = "font-bold text-pink-200 text-lg">{name}</h3>
-      <p className="text-white">Quantity: {quantity}</p>
-      {!hideCategory && (
+    <section>
+      <div className = "border-rose-400 border-4 rounded-lg max-w-md mx-auto p-5 mb-4 bg-pink-900"> 
+        <h3 className = "font-bold text-pink-200 text-lg">{name}</h3>
+        <p className="text-white">Quantity: {quantity}</p>
+        {!hideCategory && (
           <p className = "italic text-white">Category: {category}</p>
         )}
-    </li>
+      </div>
+    </section>
   );
 }
