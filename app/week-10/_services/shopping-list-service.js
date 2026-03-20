@@ -1,4 +1,4 @@
-import { db } from "../utils/firebase";
+import { db } from "../../utils/firebase";
 import { collection, getDocs, addDoc, doc, deleteDoc } from "firebase/firestore";
 
 // getItems function.
