@@ -2,49 +2,37 @@
 import { useState } from "react";
 import { useUserAuth } from "../../contexts/AuthContext"; 
 import { useRouter } from "next/navigation";
+import itemData from "./grocery-items.json"; 
+// Shared Components.
 import SiteHeader from "@/app/components/SiteHeader";
 import PageHeader from "@/app/components/PageHeader";
-import itemData from "./grocery-items.json"; 
+import AccessDenied from "@/app/components/AccessDenied";
+import UserNavigation from "@/app/components/UserNavigation";
+
+// Week-Specific Components.
 import NewItem from "./NewGroceryItem";
 import ItemList from "./GroceryItemList";
 import MealIdeas from "./MealIdeas";
-import AccessDenied from "@/app/components/AccessDenied";
+
+  
+// TODO:
+// Add a profile page that displays the user's profile information(?)
+// Add other OAuth providers such as Google(?)
 
 export default function Page() {
   const { user, firebaseSignOut } = useUserAuth();
-  const router = useRouter();
   const [items, setItems] = useState(itemData);
   const [selectedItemName, setSelectedItemName] = useState("");
-
-  const handleSignOut = async () => {
-    try {
-      await firebaseSignOut();
-      router.push("/week-9"); // Redirect to login page after signing out
-    } catch (error) {
-      console.error("Error signing out:", error);
-    }
-  }
-
-  // TODO:
-  // Add a profile page that displays the user's profile information(?)
-  // Add other OAuth providers such as Google(?)
-
- // Access Control
-  if (!user) {
-    return <AccessDenied loginPath="/week-9" />;
-  }
 
   function handleAddItem(newItem) {
     setItems((prev) => [...prev, newItem]);
   }
 
-  const handleItemSelect = (item) => {
-    const cleanName = item
-      .split(",")[0] 
-      .replace(/[^\w\s]|_/g, "") 
-      .trim(); 
+  const handleItemSelect = (item) => setSelectedItemName(cleanItemName(item));
 
-    setSelectedItemName(cleanName);
+ // Access Control
+  if (!user) {
+    return <AccessDenied loginPath="/week-9" />;
   }
 
   return (
