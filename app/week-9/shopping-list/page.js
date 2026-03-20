@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useUserAuth } from "../../contexts/AuthContext"; 
+import { useRouter } from "next/navigation";
 import SiteHeader from "@/app/components/SiteHeader";
 import PageHeader from "@/app/components/PageHeader";
 import itemData from "./grocery-items.json"; 
@@ -10,12 +11,21 @@ import MealIdeas from "./MealIdeas";
 import Link from "next/link";
 
 export default function Page() {
-  const { user } = useUserAuth();
+  const { user, firebaseSignOut } = useUserAuth();
+  const router = useRouter();
   const [items, setItems] = useState(itemData);
   const [selectedItemName, setSelectedItemName] = useState("");
 
-  //TODO: Possible site upgrades.
-  // ADD LOGOUT BUTTON.
+  const handleSignOut = async () => {
+    try {
+      await firebaseSignOut();
+      router.push("/week-9"); // Redirect to login page after signing out
+    } catch (error) {
+      console.error("Error signing out:", error);
+    }
+  }
+
+  // TODO:
   // Add a profile page that displays the user's profile information(?)
   // Add other OAuth providers such as Google(?)
 
@@ -50,6 +60,7 @@ export default function Page() {
     setSelectedItemName(cleanName);
   }
 
+
   return (
     <main className="min-h-screen bg-black text-white">
       <header>
@@ -70,6 +81,12 @@ export default function Page() {
           <MealIdeas ingredient={selectedItemName} />
         </div>
       </div>
+
+      {/* Sign Out Button */}
+      <button href="/week-9" className="bg-pink-900 text-white font-bold py-2 px-6 rounded-full border-2 border-rose-400 hover:bg-pink-600 transition-colors"
+        onClick={handleSignOut}>
+        Sign Out
+      </button>
     </main>
   );
 }
