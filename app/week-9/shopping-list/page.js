@@ -8,7 +8,6 @@ import SiteHeader from "@/app/components/SiteHeader";
 import PageHeader from "@/app/components/PageHeader";
 import AccessDenied from "@/app/components/AccessDenied";
 import UserNavigation from "@/app/components/UserNavigation";
-
 // Week-Specific Components.
 import NewItem from "./NewGroceryItem";
 import ItemList from "./GroceryItemList";
