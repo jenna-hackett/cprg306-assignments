@@ -9,6 +9,8 @@ import NewItem from "./NewGroceryItem";
 import ItemList from "./GroceryItemList";
 import MealIdeas from "./MealIdeas";
 import Link from "next/link";
+import { cleanItemName } from "../../utils/item-utils";
+import AccessDenied from "@/app/components/AccessDenied";
 
 export default function Page() {
   const { user, firebaseSignOut } = useUserAuth();
@@ -36,13 +38,8 @@ export default function Page() {
 
   // Helper function for item selection.
   const handleItemSelect = (item) => {
-    const cleanName = item
-      .split(",")[0] 
-      .replace(/[^\w\s]|_/g, "") 
-      .trim(); 
-
-    setSelectedItemName(cleanName);
-  }
+  setSelectedItemName(cleanItemName(item));
+  };
 
   // Helper function for signout.
   const handleSignOut = async () => {
@@ -77,20 +74,7 @@ export default function Page() {
 
  // Access Control
   if (!user) {
-    return (
-      <main className="min-h-screen bg-black">
-        <SiteHeader />
-        <div className="flex flex-col items-center justify-center mt-20 p-6">
-          <div className="bg-pink-900 border-4 border-rose-400 rounded-lg p-8 text-center shadow-xl">
-            <h2 className="text-2xl font-bold text-pink-200 mb-4">Access Denied</h2>
-            <p className="text-white mb-6">You must be logged in to view the shopping list.</p>
-            <Link href="/week-9" className="bg-pink-600 text-white font-bold py-2 px-6 rounded-md border-2 border-rose-400">
-              Go to Login Page
-            </Link>
-          </div>
-        </div>
-      </main>
-    );
+    return <AccessDenied loginPath="/week-10" />;
   }
 
   return (
