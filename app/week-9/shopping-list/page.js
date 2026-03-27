@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { useUserAuth } from "../../contexts/AuthContext"; 
 import { cleanItemName } from "@/app/utils/item-utils";
 import itemData from "./grocery-items.json"; 
@@ -16,12 +17,14 @@ import MealIdeas from "./MealIdeas";
 
 export default function Page() {
   const { user, firebaseSignOut } = useUserAuth();
+  const router = useRouter();
   const [items, setItems] = useState(itemData);
   const [selectedItemName, setSelectedItemName] = useState("");
 
   const handleSignOut = async () => {
     try {
       await firebaseSignOut();
+      router.push("/week-9");
     } catch (error) {
       console.error("Error signing out: ", error);
     }
