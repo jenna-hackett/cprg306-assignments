@@ -1,19 +1,16 @@
 "use client";
 import { useState } from "react";
 import { useUserAuth } from "../../contexts/AuthContext"; 
+import { cleanItemName } from "@/app/utils/item-utils";
 import itemData from "./grocery-items.json"; 
-// Shared Components.
 import SiteHeader from "@/app/components/SiteHeader";
 import PageHeader from "@/app/components/PageHeader";
 import AccessDenied from "@/app/components/AccessDenied";
-import { cleanItemName } from "@/app/utils/item-utils";
-// Week-Specific Components.
 import NewItem from "./NewGroceryItem";
 import ItemList from "./GroceryItemList";
 import MealIdeas from "./MealIdeas";
-
   
-// TODO:
+// TODO: (??)
 // Add a profile page that displays the user's profile information(?)
 // Add other OAuth providers such as Google(?)
 
@@ -22,7 +19,7 @@ export default function Page() {
   const [items, setItems] = useState(itemData);
   const [selectedItemName, setSelectedItemName] = useState("");
 
-  const handleSignOn = async () => {
+  const handleSignOut = async () => {
     try {
       await firebaseSignOut();
     } catch (error) {
