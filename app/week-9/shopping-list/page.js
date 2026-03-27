@@ -1,13 +1,12 @@
 "use client";
 import { useState } from "react";
 import { useUserAuth } from "../../contexts/AuthContext"; 
-import { useRouter } from "next/navigation";
 import itemData from "./grocery-items.json"; 
 // Shared Components.
 import SiteHeader from "@/app/components/SiteHeader";
 import PageHeader from "@/app/components/PageHeader";
 import AccessDenied from "@/app/components/AccessDenied";
-import UserNavigation from "@/app/components/UserNavigation";
+import { cleanItemName } from "@/app/utils/item-utils";
 // Week-Specific Components.
 import NewItem from "./NewGroceryItem";
 import ItemList from "./GroceryItemList";
@@ -22,6 +21,14 @@ export default function Page() {
   const { user, firebaseSignOut } = useUserAuth();
   const [items, setItems] = useState(itemData);
   const [selectedItemName, setSelectedItemName] = useState("");
+
+  const handleSignOn = async () => {
+    try {
+      await firebaseSignOut();
+    } catch (error) {
+      console.error("Error signing out: ", error);
+    }
+  }
 
   function handleAddItem(newItem) {
     setItems((prev) => [...prev, newItem]);
