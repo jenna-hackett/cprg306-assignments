@@ -11,9 +11,6 @@ import NewItem from "./NewGroceryItem";
 import ItemList from "./GroceryItemList";
 import MealIdeas from "./MealIdeas";
   
-// TODO: (??)
-// Add a profile page that displays the user's profile information(?)
-// Add other OAuth providers such as Google(?)
 
 export default function Page() {
   const { user, firebaseSignOut } = useUserAuth();
